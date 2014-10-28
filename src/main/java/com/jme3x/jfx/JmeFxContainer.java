@@ -120,15 +120,6 @@ public class JmeFxContainer {
 		this.app = app;
 		this.fullScreenSuppport = fullScreenSupport;
 
-		app.getStateManager().attach(new AbstractAppState() {
-
-			@Override
-			public void cleanup() {
-				Platform.exit();
-				super.cleanup();
-			}
-		});
-
 		this.hostContainer = new JmeFXHostInterfaceImpl(this);
 		this.picture = new Picture("JavaFXContainer", true) {
 
